@@ -7,20 +7,30 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <style>
     body::after {
-  content: "";
-  background: url(4.jpg);
-  opacity: 0.8;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background-size: cover;
-  z-index: -1;}
+      content: "";
+      background: url(4.jpg);
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background-size: cover;
+      background-attachment:local;
+      z-index: -1;}
     </style>
+
+    <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
   </head>
 
   <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark">
   <a class="navbar-brand" href="http://talentobogota.fedesoft.org">Fedesoft</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
